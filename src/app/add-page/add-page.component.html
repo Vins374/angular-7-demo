@@ -1,0 +1,29 @@
+<section class="container-fluid">
+	<br> <br>
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+			<form (ngSubmit)="funCreate()" >
+			  <div class="form-group">
+			    <label for="exampleInputEmail1" class="bmd-label-floating">Name</label>
+			    <input type="text" class="form-control" name="name" [(ngModel)]="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1" class="bmd-label-floating">Email</label>
+			    <input type="email" class="form-control" name="email" [(ngModel)]="email">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1" class="bmd-label-floating">Mobile</label>
+			    <input type="number" class="form-control" name="mobile" [(ngModel)]="mobile">
+			  </div>
+
+			  <button class="btn btn-default">Cancel</button>
+			  <button type="submit" class="btn btn-primary btn-raised">Submit</button>
+
+			  <div class="alert alert-danger" role="alert" *ngIf='error'>
+				  {{errorMsg}}
+				</div>
+
+			</form>
+		</div>
+	</div>
+</section>
